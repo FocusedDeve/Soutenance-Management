@@ -1,0 +1,50 @@
+-- Creation de la base de donnees
+CREATE DATABASE lprommi;
+
+-- Selection de la base de donnees
+USE lprommi;
+
+-- Creation de la table `enseignant`
+CREATE TABLE enseignant (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(50) NOT NULL,
+  prenom VARCHAR(50) NOT NULL,
+  contact VARCHAR(50) NOT NULL
+);
+
+-- Creation de la table `etudiant`
+CREATE TABLE etudiant (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(50) NOT NULL,
+  prenom VARCHAR(50) NOT NULL,
+  enseignant_id INT NOT NULL,
+  FOREIGN KEY (enseignant_id) REFERENCES enseignant (id)
+);
+
+-- Creation de la table `memoire`
+CREATE TABLE memoire (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titre VARCHAR(50) NOT NULL,
+  resume VARCHAR(255) NOT NULL,
+  etudiant_id INT NOT NULL,
+  FOREIGN KEY (etudiant_id) REFERENCES etudiant (id)
+);
+
+-- Creation de la table `thematique`
+CREATE TABLE thematique (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  libelle VARCHAR(50) NOT NULL,
+  description VARCHAR(255) NOT NULL
+);
+
+-- Creation de la relation `memoire_thematique`
+CREATE TABLE memoire_thematique (
+  memoire_id INT NOT NULL,
+  thematique_id INT NOT NULL,
+  PRIMARY KEY (memoire_id, thematique_id),
+  FOREIGN KEY (memoire_id) REFERENCES memoire (id),
+  FOREIGN KEY (thematique_id) REFERENCES thematique (id)
+);
+
+
+type='submit' name='action' value='update'

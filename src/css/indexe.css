@@ -1,0 +1,61 @@
+@font-face {
+    font-family: magic;
+    src: url(fonts/fFinish.ttf);
+}
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(178, 220, 184);
+}
+.textnav{
+    color: rgb(1, 14, 21);
+    font-weight: bold; 
+    font-size: 1.2em;
+}
+.textnav:hover{
+    color: rgb(238, 240, 243);
+}
+
+nav.barre{
+    background:rgb(2, 126, 2);
+    box-shadow: 0 2px 30px -2px rgba(0, 0, 0, 0.54);
+}
+
+.navitem{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+section.titre{
+    color: rgb(0, 0, 0);
+}
+section.titre h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(2, 30, 10);
+    
+}
+section.titr h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+section.titre p{
+    font-size: 20px;
+}
+.titreh2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+#searchIcon {
+    fill: #ffffff; /* Couleur par défaut */
+    width: 50px;
+    height: 35px;
+    transition: fill 0.3s; /* Transition de couleur sur 0.3 secondes */
+}
+
+/* Style lorsque le curseur survole le SVG */
+#searchIcon:hover {
+    fill: rgb(0, 128, 255); /* Couleur au survol */
+}
